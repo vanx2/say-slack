@@ -9,12 +9,16 @@ http.createServer(function (req, res) {
   req.on('data', function(chunk) { data += chunk; });
   req.on('end', function() {
 // data needs sanitize
-    var child = exec('say ' + qs.parse(data).text ,function (err, stdout, stderr) {
-      console.log(err);
-    });
+  var text = qs.parse(data).text;
+    if (text) {
+console.log(text);
+      var child = exec('say ' + text ,function (err, stdout, stderr) {
+        console.log(err);
+      });
+    }
   });
   res.writeHead(200, {'Content-Type': 'application/json'});
-  res.write('{ "text": "aa", "username": "vv" }');
+//  res.write('{ "text": "aa", "username": "vv" }');
   res.end();
 }).listen(config.port);
 
