@@ -2,7 +2,7 @@
 var config = require('./config/default.json');
 var http = require('http');
 var qs = require('qs');
-var exec = require('child_process').exec;
+var exec = require('child_process').execFile;
 
 http.createServer(function (req, res) {
   var data = '';
@@ -10,10 +10,10 @@ http.createServer(function (req, res) {
   req.on('end', function() {
 // data needs sanitize
   var text = qs.parse(data).text;
-    if (text) {
 console.log(text);
-      var child = exec('say ' + text ,function (err, stdout, stderr) {
-        console.log(err);
+    if (text) {
+      var child = exec('/usr/bin/say',[text] ,function (err, result) {
+        console.log(result);
       });
     }
   });
