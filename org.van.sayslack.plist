@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>org.van.sayslack</string>
+        <string>org.van.sayslack</string>
     <key>RunAtLoad</key>
-    <true/>
+        <true/>
     <key>KeepAlive</key>
-    <true/>
+        <true/>
     <key>EnvironmentVariables</key>
-    <dict>
-        <key>CATALINA_OPTS</key>
-        <string>-Djava.awt.headless=true</string>
-    </dict>
+        <dict>
+            <key>PATH</key>
+                <string>/usr/bin/:/usr/local/bin/:$PATH</string>
+        </dict>
     <key>ProgramArguments</key>
-    <array>
+        <array>
         <string>/Users/van/Documents/scripts/saySlack/server.js</string>
-        <string>run</string>
     </array>
 </dict>
 </plist>
