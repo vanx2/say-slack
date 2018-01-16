@@ -6,11 +6,10 @@ Say posted data via `say` command on macOS
 
 It runs on mac OS only, Node.js is required.
 
-1. Open terminal
-Open terminal.app.
+1. Open terminal.app.
 
-2. Change directory
-Change directory to you want to install
+2. Change directory to you want to install
+
 ```
 cd ~/Documents
 ```
@@ -28,6 +27,7 @@ unzip master
 ```
 
 4. Initialize
+
 install `qs` module and set plist to run forever as daemon
 ```
 cd say-slack*
