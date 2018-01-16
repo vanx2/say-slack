@@ -9,13 +9,13 @@ It runs on mac OS only, Node.js is required.
 1. Open terminal
 Open terminal.app.
 
-1. Change directory
+2. Change directory
 Change directory to you want to install
 ```
 cd ~/Documents
 ```
 
-1. Download the script
+3. Download the script
 
 If git command is ready:
 ```
@@ -27,7 +27,7 @@ curl -O https://codeload.github.com/vanx2/say-slack/zip/master
 unzip master
 ```
 
-1. Initialize
+4. Initialize
 install `qs` module and set plist to run forever as daemon
 ```
 cd say-slack*
