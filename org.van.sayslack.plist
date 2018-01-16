@@ -15,7 +15,8 @@
         </dict>
     <key>ProgramArguments</key>
         <array>
-        <string>/Users/van/Documents/scripts/saySlack/server.js</string>
+            <string>node</string>
+            <string>/Users/van/Documents/scripts/saySlack/server.js</string>
     </array>
 </dict>
 </plist>
