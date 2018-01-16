@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/env node
 var config = require('./config/default.json');
 var http = require('http');
 var qs = require('qs');
@@ -8,7 +8,7 @@ http.createServer(function (req, res) {
   var data = '';
   req.on('data', function(chunk) { data += chunk; });
   req.on('end', function() {
-// data needs sanitize
+// TODO: cleaning posted data
   var text = qs.parse(data).text;
 console.log(text);
     if (text) {
